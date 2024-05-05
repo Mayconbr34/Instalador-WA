@@ -48,7 +48,7 @@ REACT_APP_VERSION="1.0.0"
 REACT_APP_PRIMARY_COLOR=$#fffff
 REACT_APP_PRIMARY_DARK=2c3145
 REACT_APP_NUMBER_SUPPORT=51997059551
-SERVER_PORT=3333
+SERVER_PORT=3000
 WDS_SOCKET_PORT=0
 [-]EOF
 EOF
@@ -106,7 +106,7 @@ server {
   server_name $frontend_hostname;
 
   location / {
-    proxy_pass http://127.0.0.1:3333;
+    proxy_pass http://127.0.0.1:3000;
     proxy_http_version 1.1;
     proxy_set_header Upgrade \$http_upgrade;
     proxy_set_header Connection 'upgrade';
@@ -134,7 +134,7 @@ system_unzip() {
   sleep 2
 
   sudo su - root <<EOF
-  unrar "${PROJECT_ROOT}"/whaticket.rar
+  unrar x "${PROJECT_ROOT}"/whaticket.rar
 EOF
 
   sleep 2

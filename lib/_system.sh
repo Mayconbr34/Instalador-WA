@@ -36,7 +36,7 @@ system_unzip_whaticket() {
   sleep 2
 
   sudo su - deploywhatstalk <<EOF
-  unrar whaticket.rar
+  unrar x whaticket.rar
 EOF
 
   sleep 2
