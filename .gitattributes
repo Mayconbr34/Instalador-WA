@@ -1,1 +1,2 @@
 *.rar filter=lfs diff=lfs merge=lfs -text
+whaticket.rar filter=lfs diff=lfs merge=lfs -text
